@@ -1,0 +1,4 @@
+models:
+  - post
+  - user
+  - session

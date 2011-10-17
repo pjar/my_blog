@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title MyBlog | #{ @page_title }
+    = stylesheet_link_tag :all
+    = javascript_include_tag 'jquery-1.6.4.min.js' 
+    = javascript_include_tag 'rails.js' 
+    = javascript_include_tag 'application.js'     
+    = csrf_meta_tag
+    
+    = yield :local_javascript
+    = yield :head
+  %body
+    #banner
+      .the-title
+        %h1
+          %p mY_bloG
+      #navigation
+    #container
+      #sidebar
+      #contents
+        = yield
+    #footer
+      == &copy; 2011 jp
